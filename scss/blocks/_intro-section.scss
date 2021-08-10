@@ -1,0 +1,44 @@
+// INTRO SECTION
+.intro__content {
+  width: 447px;
+  margin-top: 170px;
+}
+
+.intro__title {
+  margin: 0;
+  font-weight: 100;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -1px;
+  color: $color-text-dark;
+}
+.intro-section {
+  background-color: #F2F2F2;
+}
+.intro__text {
+  margin-top: 24px;
+  margin-bottom: 36px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.28125px;
+  color: $color-text;
+}
+.intro-section__container {
+  display: flex;
+  padding-bottom: 170px;
+}
+.intro__content__right {
+
+}
+.intro__content__right img {
+  width: 840px;
+  height: 750px;
+  position: absolute;
+  transform: translate(-1px,-60px);
+}
+.intro__content::before {
+  content: url(/images/hero-phones-desktop.png);
+  position: absolute;
+  transform: translate(640px,-250px);
+  z-index: 1;
+}

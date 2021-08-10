@@ -1,0 +1,63 @@
+.intro-section__too {
+    background-color: #F4F5F7;
+    padding-top: 96px;
+    padding-bottom: 94px;
+}
+
+.inner__content {
+    width: 635px;
+}
+
+.inner__title {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 40px;
+    line-height: 64px;
+    letter-spacing: -0.714286px;
+    color: #2D314D;
+}
+
+.inner__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.28125px;
+    color: #9597A5;
+    margin-bottom: 72px;
+}
+
+.inner__pages {
+    @include reset-list;
+    display: flex;
+}
+
+.linner__pages__item {
+    width: 255px;
+}
+.linner__pages__item ~ .linner__pages__item {
+    margin-left: 30px;
+}
+.linner__pages__jpg {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 14px;
+}
+
+.linner__pages__title {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.428571px;
+    color: #2D314D;
+}
+
+.linner__pages__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+    color: #9597A5;
+}

@@ -1,0 +1,87 @@
+// footer
+.footer {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: #2D314D;
+}
+
+.footer__wrapper {
+    display: flex;
+    align-items: center
+}
+
+.footer__pages {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+}
+
+.footer-wrapper__logo {
+    display: inline-block;
+}
+
+.footer-wrapper__img {
+    display: block;
+    width: 139px;
+    height: 20px;
+}
+
+.footer__pages-img {
+    display: flex;
+    align-items: center;
+}
+
+.footer__pages-item {
+    margin-right: 131px;
+}
+
+.footer__pages-img {
+    margin-top: 50px;
+}
+
+.footer__pages-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.footer__pages-link~.footer__pages-link {
+    margin-left: 13px;
+}
+
+.footer__pages-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__pages-list~.footer__pages-list {
+    margin-left: 160px;
+}
+
+.footer__pages-list a {
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: -0.234375px;
+    color: #FFFFFF;
+    @include reset-link;
+}
+
+.footer__wrapper-right {
+    margin-left: auto;
+    text-align: right;
+
+}
+
+.footer__wrapper-right__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: -0.234375px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    margin-top: 24px;
+}
