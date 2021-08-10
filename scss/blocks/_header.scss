@@ -1,8 +1,11 @@
 /* SITE HEADER */
 .site-header {
   background-color: #fff;
-  position: relative;
-  z-index: 2;
+  // position: relative;
+  z-index: 3;
+  top: 0px;
+  position: sticky;
+  // position: fixed;
 }
 
 .header-wrapper {
@@ -66,11 +69,14 @@ path {
   background-color: green;
   transition: all 0.2s ease-in-out;
 }
+.site-button{
+  transition: all 0.3s ease;
+}
 .site-button:hover{
-  border: 1px solid green;
-  background: transparent;
-  color: green;
-  // opacity: 0.7;
+  opacity: 0.4;
+}
+.site-button:active{
+  opacity: 1;
 }
 // DRY - DON'T REPEAT YOURSELF
 // KISS - KEEP IT SIMPLE, STUPID

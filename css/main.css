@@ -356,9 +356,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -410,8 +407,9 @@ img {
 /* SITE HEADER */
 .site-header {
   background-color: #fff;
-  position: relative;
-  z-index: 2;
+  z-index: 3;
+  top: 0px;
+  position: sticky;
 }
 
 .header-wrapper {
@@ -490,15 +488,29 @@ path {
   transition: all 0.2s ease-in-out;
 }
 
+.site-button {
+  transition: all 0.3s ease;
+}
+
 .site-button:hover {
-  border: 1px solid green;
-  background: transparent;
-  color: green;
+  opacity: 0.4;
+}
+
+.site-button:active {
+  opacity: 1;
+}
+
+.intro-section {
+  background-color: #F2F2F2;
+  height: 610px;
+  position: relative;
+  z-index: 1;
 }
 
 .intro__content {
   width: 447px;
-  margin-top: 170px;
+  margin-bottom: 170px;
+  transform: translateY(-60px);
 }
 
 .intro__title {
@@ -508,10 +520,6 @@ path {
   line-height: 64px;
   letter-spacing: -1px;
   color: #2d314d;
-}
-
-.intro-section {
-  background-color: #F2F2F2;
 }
 
 .intro__text {
@@ -525,21 +533,22 @@ path {
 
 .intro-section__container {
   display: flex;
-  padding-bottom: 170px;
+  align-items: center;
 }
 
-.intro__content__right img {
-  width: 840px;
-  height: 750px;
-  position: absolute;
-  transform: translate(-1px, -60px);
+.intro__content__right {
+  width: 320px;
 }
 
-.intro__content::before {
-  content: url(/images/hero-phones-desktop.png);
-  position: absolute;
-  transform: translate(640px, -250px);
-  z-index: 1;
+.intro__content__right {
+  background-image: url(/images/hero-phones-desktop.png), url(/images/hero-bg-desktop.png);
+  background-size: cover;
+  width: 810px;
+  height: 920px;
+  transform: translate(150px, -50px);
+  background-repeat: no-repeat;
+  background-size: 580px 820px, 755px 750px;
+  background-position: 120px 0px, -55px -20px;
 }
 
 .intro-section__too {
@@ -580,6 +589,16 @@ path {
 
 .linner__pages__item {
   width: 255px;
+  height: 300px;
+  padding: 10px 10px;
+  transition: all 0.3s ease;
+}
+
+.linner__pages__item:hover {
+  background-color: white;
+  box-shadow: -15px 0 10px 0 rgba(52, 233, 133, 0.2);
+  border-radius: 10px;
+  transform: translateX(10px);
 }
 
 .linner__pages__item ~ .linner__pages__item {
@@ -643,14 +662,39 @@ path {
   background-color: #FFFFFF;
 }
 
+.internal__item:hover {
+  background-color: transparent;
+}
+
+.internal__item:hover .internal__item-jpg {
+  transform: translateY(50%);
+}
+
+.internal__item:hover .internal__item-intro {
+  transform: translateY(-52%);
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.internal__item:hover .internal__item-intro .internal__item-small {
+  color: #FFFFFF;
+}
+.internal__item:hover .internal__item-intro .internal__item-title {
+  color: #30C88F;
+}
+.internal__item:hover .internal__item-intro .internal__item-text {
+  color: #FFFFFF;
+}
+
 .internal__item-jpg {
   display: inline-block;
   width: 255px;
   height: 200px;
+  transition: all 0.9s ease;
 }
 
 .internal__item-intro {
   padding: 24px 24px;
+  transition: all 0.9s ease;
 }
 
 .internal__item-small {
@@ -706,12 +750,25 @@ path {
 
 .footer-wrapper__logo {
   display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .footer-wrapper__img {
   display: block;
   width: 139px;
   height: 20px;
+}
+
+.footer-wrapper__logo:hover {
+  transform: translateY(-5px);
+}
+
+.footer-wrapper__logo:hover .footer-wrapper__img path {
+  fill: aqua;
+}
+
+svg path:hover {
+  fill: aqua;
 }
 
 .footer__pages-img {
@@ -739,6 +796,10 @@ path {
 .footer__pages-list {
   display: flex;
   flex-direction: column;
+}
+
+.footer__pages-list a:hover {
+  color: aqua;
 }
 
 .footer__pages-list ~ .footer__pages-list {
